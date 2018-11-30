@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/../../../../favicon.ico">
+    <link rel="icon" href="../../../../favicon.ico">
 
     <title>Sistema Integral de Administración de Petroliferos - @yield('title')</title>
 
@@ -15,14 +15,14 @@
     <!------ Include the above in your HEAD tag ---------->
 
     <!-- Bootstrap core CSS -->
-    <link href="/../../dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/dashboard.css" rel="stylesheet">
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/css/dashboard.css" rel="stylesheet">
-    <link href="{ assets('/css/layout.css') }" rel="stylesheet">
-    <link href="/css/home.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="{ assets('css/layout.css') }" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
 
     <script type="text/css"></script>
 
@@ -40,7 +40,7 @@
     <nav class="navbar navbar-expand-md fixed-top flex-md-nowrap p-0 shadow">
       <div class="navbar-header" style="min-height:50px;">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/"><img width="120px" height="70px" class="img-responsive2"
-       src="/SIAP2a_logo.png"></a>
+       src="SIAP2a_logo.png"></a>
       <!--<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
     </div>
       @section('menu')
@@ -59,11 +59,11 @@
 
     <div class="container-fluid">
       <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <nav class="col-md-1 d-none d-md-block bg-light sidebar">
         </nav>
 
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <main role="main" class="col-md-12 ml-sm-auto col-lg-10 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 
             <div class="container-fluid" style="margin-top:1px;">
@@ -71,7 +71,11 @@
           	</div>
 
           </div>
+
         </main>
+
+        
+
       </div>
     </div>
 
@@ -106,10 +110,10 @@
             borderColor: '#007bff',
             borderWidth: 4,
             pointBackgroundColor: '#007bff'
-         }]
+          }]
         },
         options: {
-         scales: {
+          scales: {
             yAxes: [{
               ticks: {
                 beginAtZero: false
@@ -131,7 +135,10 @@ $(document).ready(function(){
             $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
             $(this).toggleClass('open');
         },
-        
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+            $(this).toggleClass('open');
+        }
     );
 });
 </script>
