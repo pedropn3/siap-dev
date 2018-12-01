@@ -13,6 +13,9 @@
       @endif
 
       <div class="content">
+
+        <canvas style="background: url('img/estacion2.jpg') no-repeat fixed center center !important;" class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+
           <div class="title m-b-md">
               S I A P
           </div>
